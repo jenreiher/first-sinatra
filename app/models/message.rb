@@ -3,10 +3,10 @@ class Message < ActiveRecord::Base
   validate :url_contains_http
 
   def url_contains_http
-    if url.nil? || url.start_with?('http://')
+    if url.start_with?('http://') || url.empty?
       true
     elsif 
-        errors.add(:url, 'URL must start with http://')
+      errors.add(:url, 'must start with http://')
     end
   end
 
