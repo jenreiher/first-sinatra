@@ -19,6 +19,9 @@
     <input type ="text" name="content" value="<%= @message && @message.content %>">
   </div>
   <div>
+    <label>Source URL:</label>
+    <input type="url" name="url" value="<%= @message && @message.url %>"
+  <div>
     <input type="submit" value="Submit">
   </div>
 </form>
